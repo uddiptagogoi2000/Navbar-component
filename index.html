@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- [Delete this comment] This file is the main file for the challenge. For the most part, you should be editing this file. -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hero Section | GreatFrontEnd Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Tailwind CDN allows you to use Tailwind classes immediately in your HTML without any installation steps. 
+      If you're not using Tailwind, you may delete the <script> -->
+    <!-- Get started on Tailwind: https://tailwindcss.com/docs/installation/play-cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="icon" href="img/favicon.ico" sizes="any" />
+    <style>
+      /* You may write styles inside this <style> tag or within `css/style.css`. */
+    </style>
+  </head>
+  <body>
+    <!-- Add your site or application content here -->
+    <div id="root" class="h-screen relative">
+      <header
+        class="flex justify-between items-center px-5 py-8 md:px-10 xl:gap-16 2xl:gap-28 max-w-screen-2xl mx-auto"
+      >
+        <img src="img/abstractly.png" alt="Abstractly Logo" class="w-32" />
+        <button id="menu-button" aria-expanded="false" aria-controls="menu-id">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6 text-gray-500 cursor-pointer xl:hidden"
+          >
+            <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+          </svg>
+        </button>
+        <nav class="flex-1 items-center justify-between hidden xl:flex">
+          <ul class="flex gap-8 items-center">
+            <li>Home</li>
+            <li>Features</li>
+            <li>Pricing</li>
+            <li>About us</li>
+            <li>Contact</li>
+          </ul>
+          <div class="flex items-center gap-4">
+            <button class="rounded-md border shadow-sm px-4 py-2">
+              Learn more
+            </button>
+            <button
+              class="rounded-md px-4 py-2 bg-[#4338CA] hover:bg-[#3730A3] text-white"
+            >
+              See pricing
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      <div
+        id="overlay"
+        class="bg-black/50 h-full fixed left-0 right-0 top-0 bottom-0 invisible transition-colors duration-300 xl:hidden"
+      >
+        <nav
+          id="sidebar"
+          class="flex flex-col w-[95%] md:w-[98%] bg-white h-full -translate-x-full transition-transform delay-75 duration-300"
+        >
+          <div class="flex justify-between items-center px-5 py-8 md:px-10">
+            <img src="img/abstractly.png" alt="Abstractly Logo" class="w-32" />
+            <button
+              id="close-button"
+              aria-expanded="true"
+              aria-controls="menu-id"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6 text-gray-500 cursor-pointer"
+              >
+                <path
+                  d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <ul class="flex flex-col gap-5 px-5 md:px-10">
+            <li class="pl-2">Home</li>
+            <li class="pl-2">Features</li>
+            <li class="pl-2">Pricing</li>
+            <li class="pl-2">About us</li>
+            <li class="pl-2">Contact</li>
+          </ul>
+          <div class="px-4 flex flex-col gap-4 mt-auto py-5">
+            <button class="rounded-md w-full border shadow-sm p-2">
+              Learn more
+            </button>
+            <button
+              class="rounded-md w-full p-2 bg-[#4338CA] hover:bg-[#3730A3] text-white"
+            >
+              Try it out
+            </button>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Attribute this challenge to yourself! -->
+      <!-- <div class="credits">
+        A challenge by
+        <a
+          href="https://www.greatfrontend.com/projects?ref=challenges"
+          target="_blank"
+          >GreatFrontEnd Projects</a
+        >. Built by
+        <a href="https://www.greatfrontend.com/u/your_username" target="_blank"
+          >Your Name</a
+        >.
+      </div> -->
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
